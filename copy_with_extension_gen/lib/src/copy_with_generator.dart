@@ -41,7 +41,7 @@ class CopyWithGenerator extends GeneratorForAnnotation<CopyWith> {
   ) {
     final constructorInput = sortedFields.fold(
       "",
-      (r, v) => "$r ${v.type} ${v.name},",
+      (r, v) => "$r ${v.type}? ${v.name},",
     );
     final paramsInput = sortedFields.fold(
       "",
